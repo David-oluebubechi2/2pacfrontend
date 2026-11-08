@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <pattern id="pin" width="18" height="10" patternUnits="userSpaceOnUse">
+      <rect width="18" height="10" fill="#1c1e26"/>
+      <rect x="8" width="2" height="10" fill="#c9b18a" opacity="0.8"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="500" fill="#1c1e26"/>
+  <rect width="400" height="500" fill="url(#pin)"/>
+</svg>

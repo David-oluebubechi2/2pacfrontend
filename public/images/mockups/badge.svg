@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#f8f5f0"/>
+  <circle cx="200" cy="210" r="150" fill="none" stroke="#14120f" stroke-width="10"/>
+  <circle cx="200" cy="210" r="132" fill="none" stroke="#b8935a" stroke-width="3"/>
+  <defs>
+    <path id="top" d="M 80 210 A 120 120 0 0 1 320 210"/>
+    <path id="bottom" d="M 78 210 A 122 122 0 0 0 322 210"/>
+  </defs>
+  <text font-family="Georgia, serif" font-size="22" fill="#14120f" letter-spacing="6">
+    <textPath href="#top" startOffset="50%" text-anchor="middle">2PC CLASSIC BOUTIQUE</textPath>
+  </text>
+  <text font-family="Georgia, serif" font-size="18" fill="#b8935a" letter-spacing="8">
+    <textPath href="#bottom" startOffset="50%" text-anchor="middle">EST. 2026</textPath>
+  </text>
+  <text x="200" y="200" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="72" fill="#14120f" letter-spacing="2">NYC</text>
+  <rect x="120" y="228" width="160" height="4" fill="#b8935a"/>
+  <text x="200" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#14120f" letter-spacing="6">STYLE • QUALITY</text>
+  <text x="200" y="430" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="34" fill="#b8935a" letter-spacing="4">2PAC</text>
+  <text x="200" y="462" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6f6a61" letter-spacing="8">CLASSIC</text>
+</svg>

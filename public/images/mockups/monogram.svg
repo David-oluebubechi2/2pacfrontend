@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <pattern id="mono" width="90" height="90" patternUnits="userSpaceOnUse">
+      <rect width="90" height="90" fill="#14120f"/>
+      <g fill="none" stroke="#b8935a" stroke-width="2">
+        <polygon points="45,4 86,45 45,86 4,45"/>
+        <polygon points="45,22 68,45 45,68 22,45"/>
+      </g>
+      <text x="45" y="51" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#b8935a">2PC</text>
+      <g fill="#b8935a">
+        <circle cx="0" cy="0" r="3"/>
+        <circle cx="90" cy="0" r="3"/>
+        <circle cx="0" cy="90" r="3"/>
+        <circle cx="90" cy="90" r="3"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="400" height="500" fill="#14120f"/>
+  <rect width="400" height="500" fill="url(#mono)"/>
+</svg>

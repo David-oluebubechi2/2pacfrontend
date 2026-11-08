@@ -1,0 +1,110 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #14120f;
+  --color-cream: #f8f5f0;
+  --color-sand: #ece6dc;
+  --color-gold: #7c4dab;
+  --color-gold-dark: #461b67;
+  --color-gold-soft: #efe7f6;
+  --color-muted: #6f6a61;
+
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  --shadow-soft: 0 1px 2px rgb(20 18 15 / 0.04), 0 12px 30px -18px rgb(20 18 15 / 0.18);
+  --shadow-lift: 0 24px 50px -28px rgb(70 27 103 / 0.4);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-gold-dark);
+    color: var(--color-cream);
+  }
+
+  :where(input, select, textarea):focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px rgb(124 77 171 / 0.16);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #c9bad8 transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c9bad8;
+    border: 3px solid var(--color-cream);
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 45s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
