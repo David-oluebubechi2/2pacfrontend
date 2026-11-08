@@ -95,10 +95,14 @@ export function setToken(token: string | null) {
 
 // Same-origin '/api' works behind a reverse proxy (nginx/vercel rewrite).
 // For a separate API host, set VITE_API_URL (e.g. "https://api.example.com").
-const API_BASE = (import.meta.env.VITE_API_URL || '/api').replace(/\/$/, '')
+// The '/api' suffix is added automatically, so either form works.
+const API_ORIGIN = (import.meta.env.VITE_API_URL || '')
+  .replace(/\/$/, '')
+  .replace(/\/api$/, '')
+const API_BASE = API_ORIGIN ? `${API_ORIGIN}/api` : '/api'
 
 export function resolveImageUrl(src: string): string {
-  if (src.startsWith('/uploads')) return `${API_BASE.replace(/\/api$/, '')}${src}`
+  if (src.startsWith('/uploads')) return `${API_ORIGIN}${src}`
   return src
 }
 
