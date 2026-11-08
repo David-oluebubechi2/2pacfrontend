@@ -96,7 +96,7 @@ export function setToken(token: string | null) {
 // Same-origin '/api' works behind a reverse proxy (nginx/vercel rewrite).
 // For a separate API host, set VITE_API_URL (e.g. "https://api.example.com").
 // The '/api' suffix is added automatically, so either form works.
-const API_ORIGIN = (import.meta.env.VITE_API_URL || '')
+const API_ORIGIN = (import.meta.env.VITE_API_URL || 'https://twopacbackend.onrender.com')
   .replace(/\/$/, '')
   .replace(/\/api$/, '')
 const API_BASE = API_ORIGIN ? `${API_ORIGIN}/api` : '/api'
